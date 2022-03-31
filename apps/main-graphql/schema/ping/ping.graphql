@@ -1,7 +1,0 @@
-type Ping {
-  message: String
-}
-
-type Query {
-  ping(message: String): Ping
-}
