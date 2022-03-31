@@ -1,0 +1,25 @@
+type User {
+  id: ID!
+  email: String!
+  phoneNumber: String
+  nickname: String
+  auth0Id: String
+  sendbirdId: String
+  avatarUrl: String
+  createdAt: String
+  updatedAt: String
+}
+
+type Query {
+  fetchCurrentUser: User,
+}
+
+type Mutation {
+  createUser(email: String!, password: String!): createUserResponse
+}
+
+type createUserResponse {
+  status: String!
+  message: String
+  user: User
+}
